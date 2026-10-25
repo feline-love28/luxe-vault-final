@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal Login — LUXE VAULT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body style="background-color: var(--primary-900);">
+
+    <main class="main-content auth-wrapper">
+        <div class="auth-card" style="border: 1px solid rgba(255,255,255,0.15);">
+            <div class="auth-header">
+                <a href="../index.html" class="brand-logo auth-logo" style="color:white;">
+                    <div class="logo-icon">💎</div>
+                    <span>LUXE <span class="accent">VAULT</span></span>
+                </a>
+                <h2 style="color:white; margin-top:0.5rem;">Admin Access Portal</h2>
+                <p style="color:#ebdcd5;">Management Portal & System Control</p>
+            </div>
+
+            <!-- Alert Box -->
+            <div id="admin-alert" class="alert"></div>
+
+            <!-- Demo Hint Box -->
+            <div class="notice-box" style="margin-bottom: 1.5rem; background: #fffbeb; border-color: rgba(245, 158, 11, 0.3); color: #b45309;">
+                🔑 <strong>Demo Admin Credentials:</strong><br>
+                Email: <code>admin@luxevault.com</code><br>
+                Password: <code>admin123</code>
+            </div>
+
+            <form id="admin-login-form">
+                <div class="form-group">
+                    <label for="adminEmail" class="form-label" style="color:white;">Admin Email</label>
+                    <input type="email" id="adminEmail" class="form-control" value="admin@luxevault.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="adminPassword" class="form-label" style="color:white;">Password</label>
+                    <input type="password" id="adminPassword" class="form-control" value="admin123" required>
+                </div>
+
+                <button type="submit" class="btn btn-accent btn-lg btn-full" style="margin-top: 1rem;">Access Admin Dashboard</button>
+            </form>
+
+            <div class="auth-footer" style="border-color:rgba(255,255,255,0.1); color:#ebdcd5;">
+                <a href="../index.html" class="link-gold">&larr; Back to Main Website</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript Files -->
+    <script src="../js/mock-data.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

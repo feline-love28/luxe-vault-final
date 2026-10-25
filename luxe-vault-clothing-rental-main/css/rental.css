@@ -1,0 +1,225 @@
+/* ==========================================================================
+   Luxe Vault - Rental, Checkout & My-Rentals Stylesheet
+   ========================================================================== */
+
+.rental-page-container {
+    padding: 3rem 0;
+}
+
+.rental-grid {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+/* Left Form Box */
+.rental-form-card {
+    background-color: var(--surface-white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.section-heading-row {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section-heading-row h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--text-heading);
+}
+
+/* Right Summary Sidebar */
+.order-summary-card {
+    background-color: var(--surface-white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    position: sticky;
+    top: 96px;
+    box-shadow: var(--shadow-md);
+}
+
+.summary-product-mini {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1.25rem;
+}
+
+.summary-product-mini img {
+    width: 80px;
+    height: 95px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+}
+
+.mini-details h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-heading);
+    margin-bottom: 0.25rem;
+}
+
+.mini-details p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.price-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-bottom: 1.25rem;
+}
+
+.breakdown-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    color: var(--text-body);
+}
+
+.breakdown-row.total-row {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--primary-900);
+    padding-top: 1rem;
+    border-top: 2px solid var(--border-color);
+}
+
+.notice-box {
+    background-color: var(--warning-bg);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    color: #b45309;
+    padding: 0.85rem;
+    border-radius: var(--radius-md);
+    font-size: 0.825rem;
+    line-height: 1.4;
+    margin-top: 1rem;
+}
+
+/* PAYMENT PAGE METHOD SELECTOR */
+.payment-methods-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.payment-method-card {
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.payment-method-card:hover {
+    border-color: var(--border-hover);
+}
+
+.payment-method-card.selected {
+    border-color: var(--accent-gold);
+    background-color: var(--accent-light);
+}
+
+.payment-method-card input[type="radio"] {
+    accent-color: var(--accent-gold);
+}
+
+.method-info h5 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-heading);
+}
+
+.method-info p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* MY RENTALS STYLES */
+.my-rentals-container {
+    padding: 3rem 0;
+}
+
+.rentals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.rental-item-card {
+    background-color: var(--surface-white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 110px 1fr 200px;
+    gap: 1.5rem;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.rental-item-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-hover);
+}
+
+.rental-item-img {
+    width: 110px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+}
+
+.rental-item-info h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-heading);
+    margin-bottom: 0.35rem;
+}
+
+.rental-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+    background-color: var(--bg-main);
+    padding: 0.75rem;
+    border-radius: var(--radius-md);
+}
+
+.rental-actions-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.75rem;
+}
+
+.status-badge {
+    padding: 0.3rem 0.75rem;
+    border-radius: var(--radius-full);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.status-confirmed { background-color: #e0f2fe; color: #0284c7; }
+.status-active { background-color: #fef3c7; color: #d97706; }
+.status-returned { background-color: #dcfce7; color: #15803d; }
+.status-cancelled { background-color: #fee2e2; color: #b91c1c; }

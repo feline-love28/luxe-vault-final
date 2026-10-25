@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Designer Catalog — LUXE VAULT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="site-header">
+        <div class="container navbar-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-icon">💎</div>
+                <span>LUXE <span class="accent">VAULT</span></span>
+            </a>
+
+            <button class="mobile-toggle" aria-label="Toggle Menu">☰</button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Browse Catalog</a>
+                <a href="index.html#how-it-works" class="nav-link">How It Works</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="my-rentals.html" class="nav-link">My Rentals</a>
+            </nav>
+
+            <div class="nav-actions" id="nav-actions">
+                <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+                <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- CATALOG HEADER & SEARCH BAR -->
+    <section class="catalog-header">
+        <div class="container">
+            <div class="catalog-title-row">
+                <div>
+                    <h1 class="catalog-title">The Luxe Vault Collection</h1>
+                    <p style="color: var(--text-muted);">Explore luxury outfits, gowns, tuxedos, and ethnic festive wear available for rent</p>
+                </div>
+            </div>
+
+            <!-- SEARCH BAR -->
+            <div class="search-box-large">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="search-input" placeholder="Search by outfit name, category, color (e.g. Velvet, Tuxedo, Red)...">
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CATALOG LAYOUT -->
+    <main class="main-content container" style="margin-bottom: 4rem;">
+        <div class="catalog-layout">
+            
+            <!-- FILTER SIDEBAR -->
+            <aside class="filter-sidebar">
+                <div class="filter-header">
+                    <h3>Filter Vault</h3>
+                    <button id="clear-filters-btn" class="btn-clear-filters">Clear All</button>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="filter-group">
+                    <h4 class="filter-title">Category</h4>
+                    <div class="filter-options">
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-category" value="all" checked>
+                            <span>All Categories</span>
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-category" value="Dresses">
+                            <span>Dresses</span>
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-category" value="Suits">
+                            <span>Suits & Tuxedos</span>
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-category" value="Lehengas">
+                            <span>Lehengas</span>
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-category" value="Sherwanis">
+                            <span>Sherwanis</span>
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-category" value="Gowns">
+                            <span>Evening Gowns</span>
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-category" value="Formal Wear">
+                            <span>Formal Wear</span>
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-category" value="Party Wear">
+                            <span>Party Wear</span>
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-category" value="Traditional Wear">
+                            <span>Traditional Wear</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Gender Filter -->
+                <div class="filter-group">
+                    <h4 class="filter-title">Gender / Section</h4>
+                    <div class="filter-options">
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-gender" value="all" checked>
+                            <span>All Sections</span>
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-gender" value="Women">
+                            <span>Women</span>
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-gender" value="Men">
+                            <span>Men</span>
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-gender" value="Unisex">
+                            <span>Unisex</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Size Filter -->
+                <div class="filter-group">
+                    <h4 class="filter-title">Size</h4>
+                    <div class="filter-options">
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-size" value="all" checked>
+                            <span>All Sizes</span>
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-size" value="XS">
+                            <span>XS</span>
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-size" value="S">
+                            <span>S</span>
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-size" value="M">
+                            <span>M</span>
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-size" value="L">
+                            <span>L</span>
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-size" value="XL">
+                            <span>XL</span>
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-size" value="XXL">
+                            <span>XXL</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Availability Filter -->
+                <div class="filter-group">
+                    <h4 class="filter-title">Availability</h4>
+                    <div class="filter-options">
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-availability" value="all" checked>
+                            <span>Show All</span>
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-availability" value="Available">
+                            <span>Available Now</span>
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="radio" name="filter-availability" value="Rented">
+                            <span>Currently Rented</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Price Range Filter -->
+                <div class="filter-group">
+                    <h4 class="filter-title">Max Daily Rental Rate</h4>
+                    <div class="price-range-wrap">
+                        <input type="range" id="price-slider" class="price-range-slider" min="500" max="3000" step="100" value="3000">
+                        <div class="price-range-labels">
+                            <span>₹500</span>
+                            <span id="price-slider-val" style="color:var(--accent-gold-hover); font-weight:800;">₹3,000</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- PRODUCTS MAIN CONTENT COLUMN -->
+            <section class="products-content">
+                <!-- TOOLBAR -->
+                <div class="products-toolbar">
+                    <span id="results-count" class="results-count">Showing 0 items</span>
+
+                    <div class="sort-wrap">
+                        <label for="sort-select">Sort by:</label>
+                        <select id="sort-select" class="sort-select">
+                            <option value="default">Popularity</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name-az">Name: A to Z</option>
+                            <option value="name-za">Name: Z to A</option>
+                            <option value="rating">Highest Rated</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- PRODUCTS GRID -->
+                <div id="products-grid" class="products-grid">
+                    <!-- Dynamically injected -->
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 LUXE VAULT. College Mini-Project Frontend Demonstration.</p>
+                <p><a href="admin/admin-login.html" style="color:var(--accent-gold);">Admin Access</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/mock-data.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/clothes.js"></script>
+</body>
+</html>

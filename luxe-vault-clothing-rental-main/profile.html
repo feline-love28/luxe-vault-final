@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile — LUXE VAULT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="site-header">
+        <div class="container navbar-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-icon">💎</div>
+                <span>LUXE <span class="accent">VAULT</span></span>
+            </a>
+
+            <button class="mobile-toggle" aria-label="Toggle Menu">☰</button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Browse Catalog</a>
+                <a href="index.html#how-it-works" class="nav-link">How It Works</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="my-rentals.html" class="nav-link">My Rentals</a>
+            </nav>
+
+            <div class="nav-actions" id="nav-actions">
+                <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+                <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="profile-page-content" class="main-content container profile-container">
+        <div class="profile-grid">
+            
+            <!-- SIDEBAR CARD -->
+            <div class="profile-sidebar-card">
+                <div id="prof-avatar-letter" class="profile-avatar">A</div>
+                <h2 id="prof-display-name" class="profile-name">User Name</h2>
+                <p id="prof-display-email" class="profile-email">user@example.com</p>
+
+                <div style="display:flex; flex-direction:column; gap:0.5rem;">
+                    <a href="my-rentals.html" class="btn btn-outline btn-sm btn-full">View My Rentals</a>
+                    <button onclick="handleGlobalLogout()" class="btn btn-outline btn-sm btn-full" style="color:var(--danger); border-color:var(--danger-bg);">Sign Out</button>
+                </div>
+            </div>
+
+            <!-- MAIN EDIT FORM -->
+            <div class="profile-main-card">
+                <h3 class="profile-section-title">Personal Account Details</h3>
+
+                <form id="profile-edit-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="prof-fullName" class="form-label">Full Name</label>
+                            <input type="text" id="prof-fullName" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prof-email" class="form-label">Email Address (Read-only)</label>
+                            <input type="email" id="prof-email" class="form-control" readonly style="background:#faf7f2; cursor:not-allowed;">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="prof-phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="prof-phone" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prof-address" class="form-label">Default Delivery Address</label>
+                            <input type="text" id="prof-address" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 1.5rem;">
+                        <button type="submit" class="btn btn-primary">Save Profile Changes</button>
+                    </div>
+                </form>
+
+                <h3 class="profile-section-title" style="margin-top: 3rem;">Security & Password</h3>
+                <form onsubmit="event.preventDefault(); showToast('Password updated successfully', 'success'); this.reset();">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">New Password</label>
+                            <input type="password" class="form-control" placeholder="••••••••">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Confirm New Password</label>
+                            <input type="password" class="form-control" placeholder="••••••••">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-outline btn-sm">Update Password</button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 LUXE VAULT. College Mini-Project Frontend Demonstration.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/mock-data.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

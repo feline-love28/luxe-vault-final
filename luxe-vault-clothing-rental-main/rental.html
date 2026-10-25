@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Outfit Rental — LUXE VAULT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rental.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="site-header">
+        <div class="container navbar-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-icon">💎</div>
+                <span>LUXE <span class="accent">VAULT</span></span>
+            </a>
+
+            <button class="mobile-toggle" aria-label="Toggle Menu">☰</button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Browse Catalog</a>
+                <a href="index.html#how-it-works" class="nav-link">How It Works</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="my-rentals.html" class="nav-link">My Rentals</a>
+            </nav>
+
+            <div class="nav-actions" id="nav-actions">
+                <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+                <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB HEADER -->
+    <div style="background-color: var(--surface-white); border-bottom: 1px solid var(--border-color); padding: 0.85rem 0;">
+        <div class="container" style="font-size: 0.85rem; color: var(--text-muted);">
+            <a href="products.html">Browse Catalog</a> &nbsp;/&nbsp; <span style="color: var(--text-heading); font-weight: 600;">Rental Booking</span>
+        </div>
+    </div>
+
+    <!-- MAIN RENTAL PAGE GRID -->
+    <main class="main-content container rental-page-container">
+        <div class="rental-grid">
+            
+            <!-- LEFT COLUMN: RENTAL FORM & CUSTOMER INFO -->
+            <div class="rental-form-card">
+                <div class="section-heading-row">
+                    <h3>1. Select Rental Window</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Choose the start date and return date for your outfit rental</p>
+                </div>
+
+                <form id="rental-form">
+                    <div class="form-row" style="margin-bottom: 2rem;">
+                        <div class="form-group">
+                            <label for="startDate" class="form-label">Rental Start Date</label>
+                            <input type="date" id="startDate" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="returnDate" class="form-label">Return Date</label>
+                            <input type="date" id="returnDate" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="section-heading-row" style="margin-top: 2rem;">
+                        <h3>2. Customer & Delivery Address</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Where should we deliver your sanitized outfit?</p>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cust-name" class="form-label">Full Name</label>
+                            <input type="text" id="cust-name" class="form-control" placeholder="Aarav Sharma" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cust-email" class="form-label">Email Address</label>
+                            <input type="email" id="cust-email" class="form-control" placeholder="aarav@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cust-phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="cust-phone" class="form-control" placeholder="+91 98765 43210" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cust-address" class="form-label">Complete Delivery Address</label>
+                            <input type="text" id="cust-address" class="form-control" placeholder="House No, Building, Street, City, Pincode" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin: 1.5rem 0;">
+                        <label class="remember-me">
+                            <input type="checkbox" id="termsCheck" required>
+                            <span>I agree to return the garment in original condition by the specified return date.</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-accent btn-lg btn-full">Proceed to Payment & Checkout &rarr;</button>
+                </form>
+            </div>
+
+            <!-- RIGHT COLUMN: ORDER & PRICE SUMMARY SIDEBAR -->
+            <aside class="order-summary-card">
+                <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--text-heading); margin-bottom: 1rem;">Rental Summary</h3>
+
+                <div id="rental-summary-product">
+                    <!-- Populated dynamically by rentals.js -->
+                </div>
+
+                <div class="price-breakdown">
+                    <div class="breakdown-row">
+                        <span>Daily Rental Rate</span>
+                        <span id="sum-daily-rate">₹0</span>
+                    </div>
+                    <div class="breakdown-row">
+                        <span>Duration</span>
+                        <strong id="sum-days" style="color: var(--primary-900);">1 Day</strong>
+                    </div>
+                    <div class="breakdown-row">
+                        <span>Rental Subtotal</span>
+                        <strong id="sum-rental-cost">₹0</strong>
+                    </div>
+                    <div class="breakdown-row">
+                        <span>Security Deposit (Refundable)</span>
+                        <span id="sum-deposit">₹0</span>
+                    </div>
+
+                    <div class="breakdown-row total-row">
+                        <span>Total Payable Amount</span>
+                        <span id="sum-total">₹0</span>
+                    </div>
+                </div>
+
+                <div id="calc-notice" class="notice-box">
+                    Estimated calculation for 1 day rental. Security deposit will be refunded automatically upon return inspection.
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 LUXE VAULT. College Mini-Project Frontend Demonstration.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/mock-data.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/rentals.js"></script>
+</body>
+</html>

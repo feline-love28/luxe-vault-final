@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfit Details — LUXE VAULT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="site-header">
+        <div class="container navbar-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-icon">💎</div>
+                <span>LUXE <span class="accent">VAULT</span></span>
+            </a>
+
+            <button class="mobile-toggle" aria-label="Toggle Menu">☰</button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Browse Catalog</a>
+                <a href="index.html#how-it-works" class="nav-link">How It Works</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="my-rentals.html" class="nav-link">My Rentals</a>
+            </nav>
+
+            <div class="nav-actions" id="nav-actions">
+                <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+                <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB HEADER -->
+    <div style="background-color: var(--surface-white); border-bottom: 1px solid var(--border-color); padding: 0.85rem 0;">
+        <div class="container" style="font-size: 0.85rem; color: var(--text-muted);">
+            <a href="index.html">Home</a> &nbsp;/&nbsp; <a href="products.html">Browse Catalog</a> &nbsp;/&nbsp; <span style="color: var(--text-heading); font-weight: 600;">Product Details</span>
+        </div>
+    </div>
+
+    <!-- MAIN PRODUCT DETAILS CONTAINER -->
+    <main class="main-content container product-details-container">
+        <div id="product-details-content">
+            <!-- Dynamically populated by clothes.js -->
+            <div style="text-align:center; padding: 5rem 0;">
+                <div class="spinner"></div>
+                <p>Loading outfit details...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 LUXE VAULT. College Mini-Project Frontend Demonstration.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/mock-data.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/clothes.js"></script>
+</body>
+</html>

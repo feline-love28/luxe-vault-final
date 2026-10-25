@@ -1,0 +1,141 @@
+/* ==========================================================================
+   Luxe Vault - Responsive Breakpoints & Media Queries
+   ========================================================================== */
+
+/* Large Tablets & Small Laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .catalog-layout {
+        grid-template-columns: 240px 1fr;
+        gap: 1.5rem;
+    }
+    
+    .product-details-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .rental-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .order-summary-card {
+        position: static;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .navbar-container {
+        height: 68px;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background-color: var(--surface-white);
+        flex-direction: column;
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: var(--shadow-lg);
+        display: none;
+        gap: 1.25rem;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .catalog-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-sidebar {
+        position: static;
+        margin-bottom: 1.5rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rental-item-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .rental-item-img {
+        margin: 0 auto;
+    }
+
+    .rental-actions-column {
+        align-items: center;
+    }
+
+    .rental-meta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-layout {
+        flex-direction: column;
+    }
+
+    .admin-sidebar {
+        width: 100%;
+        position: static;
+        height: auto;
+    }
+
+    .admin-main {
+        margin-left: 0;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Mobile Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .catalog-title {
+        font-size: 1.5rem;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-card {
+        padding: 1.5rem;
+    }
+
+    .payment-methods-grid {
+        grid-template-columns: 1fr;
+    }
+}

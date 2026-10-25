@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Checkout — LUXE VAULT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rental.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="site-header">
+        <div class="container navbar-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-icon">💎</div>
+                <span>LUXE <span class="accent">VAULT</span></span>
+            </a>
+
+            <button class="mobile-toggle" aria-label="Toggle Menu">☰</button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Browse Catalog</a>
+                <a href="index.html#how-it-works" class="nav-link">How It Works</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="my-rentals.html" class="nav-link">My Rentals</a>
+            </nav>
+
+            <div class="nav-actions" id="nav-actions">
+                <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+                <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content container rental-page-container">
+        <div class="rental-grid">
+            
+            <!-- LEFT: PAYMENT METHOD SELECTION -->
+            <div class="rental-form-card">
+                <div class="section-heading-row">
+                    <h3>Select Payment Method</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Choose how you want to pay for your rental booking & security deposit</p>
+                </div>
+
+                <form id="payment-form">
+                    <div class="payment-methods-grid">
+                        <div class="payment-method-card selected">
+                            <input type="radio" name="payment-method" value="card" checked>
+                            <div class="method-info">
+                                <h5>Credit / Debit Card</h5>
+                                <p>Visa, MasterCard, RuPay</p>
+                            </div>
+                        </div>
+
+                        <div class="payment-method-card">
+                            <input type="radio" name="payment-method" value="upi">
+                            <div class="method-info">
+                                <h5>UPI / QR Code</h5>
+                                <p>GPay, PhonePe, Paytm</p>
+                            </div>
+                        </div>
+
+                        <div class="payment-method-card">
+                            <input type="radio" name="payment-method" value="netbanking">
+                            <div class="method-info">
+                                <h5>Net Banking</h5>
+                                <p>All major Indian banks</p>
+                            </div>
+                        </div>
+
+                        <div class="payment-method-card">
+                            <input type="radio" name="payment-method" value="cod">
+                            <div class="method-info">
+                                <h5>Pay on Delivery</h5>
+                                <p>Cash / Card on doorstep</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD FIELDS -->
+                    <div id="credit-card-fields" style="background-color: var(--bg-main); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+                        <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-heading);">Card Details (Simulation)</h4>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Card Number</label>
+                            <input type="text" class="form-control" placeholder="4532 •••• •••• 8910" value="4532 8819 2031 8910">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Expiry Date</label>
+                                <input type="text" class="form-control" placeholder="MM/YY" value="12/28">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">CVV / CVC</label>
+                                <input type="password" class="form-control" placeholder="123" value="991">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- UPI FIELDS -->
+                    <div id="upi-fields" style="display:none; background-color: var(--bg-main); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+                        <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-heading);">Virtual Payment Address (VPA)</h4>
+                        <div class="form-group">
+                            <label class="form-label">Enter UPI ID</label>
+                            <input type="text" class="form-control" placeholder="username@upi or 9876543210@paytm">
+                        </div>
+                    </div>
+
+                    <div class="notice-box" style="background:#ecfdf5; border-color:rgba(16,185,129,0.3); color:#15803d; margin-bottom:1.5rem;">
+                        ℹ️ Demo Notice: Clicking "Confirm & Pay" processes a simulated booking without charging real funds.
+                    </div>
+
+                    <button type="submit" id="pay-submit-btn" class="btn btn-accent btn-lg btn-full">Confirm & Pay Now &rarr;</button>
+                </form>
+            </div>
+
+            <!-- RIGHT: ORDER FINAL INVOICE SUMMARY -->
+            <aside class="order-summary-card">
+                <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--text-heading); margin-bottom: 1rem;">Invoice Summary</h3>
+
+                <div class="summary-product-mini">
+                    <img id="pay-prod-img" src="" alt="Clothing">
+                    <div class="mini-details">
+                        <h4 id="pay-prod-title">Loading...</h4>
+                        <p id="pay-prod-dates" style="font-weight:600; color:var(--text-heading);"></p>
+                    </div>
+                </div>
+
+                <div class="price-breakdown">
+                    <div class="breakdown-row">
+                        <span>Customer</span>
+                        <strong id="pay-cust-name">-</strong>
+                    </div>
+                    <div class="breakdown-row">
+                        <span>Contact Email</span>
+                        <span id="pay-cust-email" style="font-size:0.85rem;">-</span>
+                    </div>
+                    <div class="breakdown-row">
+                        <span>Daily Rate Breakdown</span>
+                        <span id="pay-rate">-</span>
+                    </div>
+                    <div class="breakdown-row">
+                        <span>Rental Cost</span>
+                        <strong id="pay-rental-cost">₹0</strong>
+                    </div>
+                    <div class="breakdown-row">
+                        <span>Security Deposit</span>
+                        <span id="pay-deposit">₹0</span>
+                    </div>
+
+                    <div class="breakdown-row total-row">
+                        <span>Total Due</span>
+                        <span id="pay-total-amount">₹0</span>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- JavaScript Files -->
+    <script src="js/mock-data.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/payments.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — LUXE VAULT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="site-header">
+        <div class="container navbar-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-icon">💎</div>
+                <span>LUXE <span class="accent">VAULT</span></span>
+            </a>
+
+            <button class="mobile-toggle" aria-label="Toggle Menu">☰</button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Browse Catalog</a>
+                <a href="index.html#how-it-works" class="nav-link">How It Works</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="my-rentals.html" class="nav-link">My Rentals</a>
+            </nav>
+
+            <div class="nav-actions" id="nav-actions">
+                <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+                <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content auth-wrapper">
+        <div class="auth-card auth-card-wide">
+            <div class="auth-header">
+                <h2>Contact Us</h2>
+                <p>Questions about a rental? Send us a message and we will get back to you.</p>
+            </div>
+
+            <div id="contact-alert" class="alert"></div>
+
+            <form id="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contact-name" class="form-label">Your Name</label>
+                        <input type="text" id="contact-name" class="form-control" placeholder="Aarav Sharma" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email" class="form-label">Email Address</label>
+                        <input type="email" id="contact-email" class="form-control" placeholder="aarav@example.com" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-subject" class="form-label">Subject</label>
+                    <input type="text" id="contact-subject" class="form-control" placeholder="Rental enquiry">
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-message" class="form-label">Message</label>
+                    <textarea id="contact-message" class="form-control" rows="5" placeholder="How can we help?" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-accent btn-lg btn-full">Send Message</button>
+            </form>
+
+            <div class="auth-footer" style="line-height: 1.8;">
+                📧 support@luxevault.com &nbsp;|&nbsp; 📞 +91 98765 43210<br>
+                📍 42 MG Road, Camp, Pune, Maharashtra
+            </div>
+        </div>
+    </main>
+
+    <script src="js/mock-data.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

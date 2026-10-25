@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Inventory — LUXE VAULT Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="admin-body">
+
+    <div class="admin-layout" id="admin-clothes-view">
+        <!-- SIDEBAR -->
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar-header">
+                <a href="../index.html" class="brand-logo" style="color:white; font-size:1.2rem;">
+                    <div class="logo-icon">💎</div>
+                    <span>LUXE <span class="accent">VAULT</span></span>
+                </a>
+            </div>
+
+            <nav class="admin-menu">
+                <a href="admin-dashboard.html" class="admin-menu-item">
+                    <span>📊 Dashboard</span>
+                </a>
+                <a href="admin-clothes.html" class="admin-menu-item active">
+                    <span>👗 Clothes Inventory</span>
+                </a>
+                <a href="admin-customers.html" class="admin-menu-item">
+                    <span>👥 Customers</span>
+                </a>
+                <a href="admin-rentals.html" class="admin-menu-item">
+                    <span>📦 Rentals & Orders</span>
+                </a>
+                <a href="admin-payments.html" class="admin-menu-item">
+                    <span>💳 Payments Ledger</span>
+                </a>
+            </nav>
+
+            <div class="admin-sidebar-footer">
+                <a href="../index.html" class="btn btn-outline btn-sm btn-full" style="color:#ebdcd5; border-color:rgba(255,255,255,0.2);">Exit to Storefront</a>
+            </div>
+        </aside>
+
+        <!-- MAIN -->
+        <div class="admin-main">
+            <header class="admin-header">
+                <h1 class="admin-page-title">Clothing Inventory Management</h1>
+                <button id="btn-open-add-modal" class="btn btn-accent btn-sm">+ Add New Outfit</button>
+            </header>
+
+            <main class="admin-content">
+                <div class="table-card">
+                    <div class="table-header-bar">
+                        <h3 style="font-size:1.1rem; font-weight:800;">Luxe Vault Inventory</h3>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Outfit Item</th>
+                                    <th>Category</th>
+                                    <th>Size</th>
+                                    <th>Rental Price</th>
+                                    <th>Deposit</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="clothes-table-tbody">
+                                <!-- Populated dynamically by admin.js -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- ADD CLOTHING MODAL -->
+    <div id="add-clothing-modal" class="modal-overlay">
+        <div class="modal-card modal-card-lg">
+            <div class="modal-header modal-header-rich">
+                <div class="modal-title-wrap">
+                    <div class="modal-icon">✨</div>
+                    <div>
+                        <h3>Add New Outfit to Vault</h3>
+                        <p class="modal-subtitle">It appears in the customer catalog as soon as you save.</p>
+                    </div>
+                </div>
+                <button id="modal-close-btn" type="button" class="modal-close" aria-label="Close">&times;</button>
+            </div>
+
+            <form id="add-clothing-form">
+                <div class="modal-body modal-body-scroll">
+
+                    <!-- 1. BASIC DETAILS -->
+                    <div class="form-section">
+                        <div class="form-section-title"><span class="step-dot">1</span> Basic details</div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="new-name">Outfit Name</label>
+                            <input type="text" id="new-name" class="form-control" placeholder="e.g. Royal Silk Sherwani" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="new-category">Category</label>
+                                <select id="new-category" class="form-control" required>
+                                    <option value="Dresses">Dresses</option>
+                                    <option value="Suits">Suits & Tuxedos</option>
+                                    <option value="Lehengas">Lehengas</option>
+                                    <option value="Sherwanis">Sherwanis</option>
+                                    <option value="Gowns">Evening Gowns</option>
+                                    <option value="Formal Wear">Formal Wear</option>
+                                    <option value="Party Wear">Party Wear</option>
+                                    <option value="Traditional Wear">Traditional Wear</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="new-gender">Gender Section</label>
+                                <select id="new-gender" class="form-control" required>
+                                    <option value="Women">Women</option>
+                                    <option value="Men">Men</option>
+                                    <option value="Unisex">Unisex</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="new-size">Size</label>
+                                <select id="new-size" class="form-control" required>
+                                    <option value="XS">XS</option>
+                                    <option value="S">S</option>
+                                    <option value="M" selected>M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                    <option value="XXL">XXL</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="new-color">Color</label>
+                                <input type="text" id="new-color" class="form-control" placeholder="e.g. Crimson Red" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. PRICING -->
+                    <div class="form-section">
+                        <div class="form-section-title"><span class="step-dot">2</span> Pricing</div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="new-price">Rental Price / Day</label>
+                                <div class="input-with-prefix">
+                                    <span class="input-prefix">₹</span>
+                                    <input type="number" id="new-price" class="form-control" placeholder="899" min="1" required>
+                                </div>
+                                <span class="form-hint">What the customer pays for each day.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="new-deposit">Security Deposit</label>
+                                <div class="input-with-prefix">
+                                    <span class="input-prefix">₹</span>
+                                    <input type="number" id="new-deposit" class="form-control" placeholder="1200" min="0" required>
+                                </div>
+                                <span class="form-hint">Refundable amount added to the total.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. PHOTO & DESCRIPTION -->
+                    <div class="form-section form-section-last">
+                        <div class="form-section-title"><span class="step-dot">3</span> Photo &amp; description</div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="new-image">Image URL</label>
+                            <input type="url" id="new-image" class="form-control" placeholder="https://images.unsplash.com/..." required>
+                        </div>
+
+                        <div id="image-preview" class="image-preview">
+                            <span>🖼️ Image preview appears here</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="new-description">Description</label>
+                            <textarea id="new-description" class="form-control" rows="3" placeholder="Fabric, cut, occasion and what is included..." required></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" id="modal-cancel-btn" class="btn btn-outline">Cancel</button>
+                    <button type="submit" class="btn btn-accent">Save to Inventory</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="../js/mock-data.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/admin.js"></script>
+    <!-- Modal extras: image preview, Cancel button, click outside / Esc to close -->
+    <script>
+        (function () {
+            const modal = document.getElementById('add-clothing-modal');
+            const form = document.getElementById('add-clothing-form');
+            const closeBtn = document.getElementById('modal-close-btn');
+            const imageInput = document.getElementById('new-image');
+            const preview = document.getElementById('image-preview');
+            const emptyPreview = '<span>🖼️ Image preview appears here</span>';
+
+            document.getElementById('modal-cancel-btn').addEventListener('click', () => closeBtn.click());
+            modal.addEventListener('click', (e) => { if (e.target === modal) closeBtn.click(); });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.style.display === 'flex') closeBtn.click();
+            });
+
+            imageInput.addEventListener('input', () => {
+                const url = imageInput.value.trim();
+                if (!url) { preview.innerHTML = emptyPreview; return; }
+                const img = new Image();
+                img.alt = 'Outfit preview';
+                img.onload = () => { preview.innerHTML = ''; preview.appendChild(img); };
+                img.onerror = () => { preview.innerHTML = '<span>⚠️ Could not load this image</span>'; };
+                img.src = url;
+            });
+
+            form.addEventListener('reset', () => { preview.innerHTML = emptyPreview; });
+        })();
+    </script>
+</body>
+</html>

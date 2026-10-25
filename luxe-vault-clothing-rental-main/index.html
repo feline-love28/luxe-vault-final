@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE VAULT — Luxury Clothing & Designer Outfit Rentals</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="site-header">
+        <div class="container navbar-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-icon">💎</div>
+                <span>LUXE <span class="accent">VAULT</span></span>
+            </a>
+
+            <button class="mobile-toggle" aria-label="Toggle Menu">☰</button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Browse Catalog</a>
+                <a href="index.html#how-it-works" class="nav-link">How It Works</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="my-rentals.html" class="nav-link">My Rentals</a>
+            </nav>
+
+            <div class="nav-actions" id="nav-actions">
+                <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+                <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        
+        <!-- HERO SECTION -->
+        <section class="hero-section" style="background: linear-gradient(135deg, #1e0a14 0%, #2d0d1e 100%); color: white; padding: 5rem 0; position: relative; overflow: hidden;">
+            <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                <div>
+                    <span style="background: rgba(212, 163, 115, 0.2); color: #d4a373; padding: 0.4rem 1rem; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; margin-bottom: 1.25rem;">
+                        💎 Rent Luxury. Define Elegance.
+                    </span>
+                    <h1 style="font-size: 3.25rem; font-weight: 800; line-height: 1.15; margin-bottom: 1.25rem; letter-spacing: -0.02em;">
+                        Haute Couture <br><span style="color: var(--accent-gold);">Delivered to Your Door.</span>
+                    </h1>
+                    <p style="font-size: 1.15rem; color: #ebdcd5; margin-bottom: 2rem; max-width: 500px; line-height: 1.6;">
+                        Access hundreds of designer wedding lehengas, bespoke tuxedos, evening gowns, and festive traditional wear at 90% off retail prices. Pristine dry cleaning & doorstep delivery.
+                    </p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="products.html" class="btn btn-accent btn-lg">Explore Luxe Catalog</a>
+                        <a href="#how-it-works" class="btn btn-outline btn-lg" style="color: white; border-color: rgba(255, 255, 255, 0.3);">How It Works</a>
+                    </div>
+                </div>
+
+                <div style="position: relative;">
+                    <img src="https://i.pinimg.com/736x/9b/fd/91/9bfd910865e0932d3be0fd65d46adc3e.jpg" alt="LUXE VAULT High Fashion Gown" style="width: 100%; height: 480px; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl); border: 2px solid rgba(212, 163, 115, 0.3);">
+                </div>
+            </div>
+        </section>   
+
+        <!-- CATEGORIES SECTION -->
+        <section id="categories" class="container" style="padding: 4rem 1.5rem;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 2.25rem; font-weight: 800; color: var(--text-heading);">Curated Collections</h2>
+                <p style="color: var(--text-muted);">Handpicked haute couture for galas, weddings, and red carpet events</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.25rem;">
+                <a href="products.html?category=dresses" class="clothing-card" style="padding: 1.5rem; text-align: center; justify-content: center; background: white;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">👗</div>
+                    <strong style="font-size: 1rem; color: var(--text-heading);">Dresses</strong>
+                </a>
+                <a href="products.html?category=suits" class="clothing-card" style="padding: 1.5rem; text-align: center; justify-content: center; background: white;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">👔</div>
+                    <strong style="font-size: 1rem; color: var(--text-heading);">Suits & Tux</strong>
+                </a>
+                <a href="products.html?category=lehengas" class="clothing-card" style="padding: 1.5rem; text-align: center; justify-content: center; background: white;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🥻</div>
+                    <strong style="font-size: 1rem; color: var(--text-heading);">Lehengas</strong>
+                </a>
+                <a href="products.html?category=sherwanis" class="clothing-card" style="padding: 1.5rem; text-align: center; justify-content: center; background: white;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🧥</div>
+                    <strong style="font-size: 1rem; color: var(--text-heading);">Sherwanis</strong>
+                </a>
+                <a href="products.html?category=gowns" class="clothing-card" style="padding: 1.5rem; text-align: center; justify-content: center; background: white;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">✨</div>
+                    <strong style="font-size: 1rem; color: var(--text-heading);">Gowns</strong>
+                </a>
+                <a href="products.html?category=formal-wear" class="clothing-card" style="padding: 1.5rem; text-align: center; justify-content: center; background: white;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">💼</div>
+                    <strong style="font-size: 1rem; color: var(--text-heading);">Formal Wear</strong>
+                </a>
+                <a href="products.html?category=party-wear" class="clothing-card" style="padding: 1.5rem; text-align: center; justify-content: center; background: white;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🎉</div>
+                    <strong style="font-size: 1rem; color: var(--text-heading);">Party Wear</strong>
+                </a>
+                <a href="products.html?category=traditional-wear" class="clothing-card" style="padding: 1.5rem; text-align: center; justify-content: center; background: white;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🌟</div>
+                    <strong style="font-size: 1rem; color: var(--text-heading);">Traditional</strong>
+                </a>
+            </div>
+        </section>
+
+        <!-- FEATURED CLOTHES SECTION -->
+        <section class="container" style="padding: 2rem 1.5rem 4rem;">
+            <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 2rem;">
+                <div>
+                    <h2 style="font-size: 2rem; font-weight: 800; color: var(--text-heading);">Featured Showpieces</h2>
+                    <p style="color: var(--text-muted);">Most requested rental designs in the Vault</p>
+                </div>
+                <a href="products.html" class="btn btn-outline">View Entire Vault &rarr;</a>
+            </div>
+
+            <div id="home-featured-grid" class="products-grid">
+                <!-- Dynamically rendered by clothes.js -->
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS SECTION -->
+        <section id="how-it-works" style="background-color: var(--surface-white); padding: 5rem 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 3.5rem;">
+                    <h2 style="font-size: 2.25rem; font-weight: 800; color: var(--text-heading);">The Luxe Vault Experience</h2>
+                    <p style="color: var(--text-muted);">Renting designer couture is seamless, personal, and pristine</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; text-align: center;">
+                    <div style="padding: 1.5rem;">
+                        <div style="width: 64px; height: 64px; background: var(--accent-light); color: var(--primary-900); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; font-weight: 800; margin: 0 auto 1.25rem;">1</div>
+                        <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Select Outfit</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Browse our curated vault of designer garments and choose your size.</p>
+                    </div>
+
+                    <div style="padding: 1.5rem;">
+                        <div style="width: 64px; height: 64px; background: var(--accent-light); color: var(--primary-900); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; font-weight: 800; margin: 0 auto 1.25rem;">2</div>
+                        <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Pick Rental Window</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Select start and return dates. We calculate duration and total costs live.</p>
+                    </div>
+
+                    <div style="padding: 1.5rem;">
+                        <div style="width: 64px; height: 64px; background: var(--accent-light); color: var(--primary-900); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; font-weight: 800; margin: 0 auto 1.25rem;">3</div>
+                        <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Pristine Delivery</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Receive sanitized, steam-pressed outfits directly at your doorstep.</p>
+                    </div>
+
+                    <div style="padding: 1.5rem;">
+                        <div style="width: 64px; height: 64px; background: var(--accent-light); color: var(--primary-900); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; font-weight: 800; margin: 0 auto 1.25rem;">4</div>
+                        <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Effortless Return</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">We pick up the garment after your event. Professional cleaning included.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo">
+                        <div class="logo-icon">💎</div>
+                        <span>LUXE <span class="accent">VAULT</span></span>
+                    </a>
+                    <p class="footer-tagline">"Rent Luxury. Define Elegance."</p>
+                    <p style="font-size: 0.85rem;">The premier online clothes rental platform for college events, weddings, and formal celebrations.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="products.html">Browse Catalog</a>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="my-rentals.html">My Rentals</a>
+                        <a href="about.html">About Us</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Collections</h4>
+                    <div class="footer-links">
+                        <a href="products.html?category=dresses">Dresses</a>
+                        <a href="products.html?category=suits">Suits & Tuxedos</a>
+                        <a href="products.html?category=lehengas">Lehengas</a>
+                        <a href="products.html?category=sherwanis">Sherwanis</a>
+                        <a href="products.html?category=gowns">Evening Gowns</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Portals</h4>
+                    <div class="footer-links">
+                        <a href="login.html">Customer Login</a>
+                        <a href="register.html">Register Account</a>
+                        <a href="admin/admin-login.html" style="color: var(--accent-gold);">Admin Portal</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 LUXE VAULT. College Mini-Project Frontend Demonstration.</p>
+                <p>Designed for Node.js + Express + MySQL</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/mock-data.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/clothes.js"></script>
+</body>
+</html>
